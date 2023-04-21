@@ -15,6 +15,14 @@ class WebpageForm(forms.ModelForm):
     class Meta:
         model=Webpage
         fields='__all__'
+        #fields=['topic_name','name']
+        #exclude=['name']
+        help_texts={'topic_name':'should not be integers','name':'only Alphabets'}
+        widgets={'url':forms.PasswordInput,'name':forms.Textarea}
+        #labels={'topic_name':'TN','name':'N'}
+
+
+
 
 
 
